@@ -29,6 +29,7 @@
             this.btnBrowseDest = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFolderList = new System.Windows.Forms.DataGridView();
+            this.folderitem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBrowseList = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGenerate = new System.Windows.Forms.Button();
@@ -40,8 +41,10 @@
             this.txtList = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnRead = new System.Windows.Forms.Button();
-            this.folderitem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClear = new System.Windows.Forms.Button();
+            this.groupPos = new System.Windows.Forms.GroupBox();
+            this.rdoSuffix = new System.Windows.Forms.RadioButton();
+            this.rdoPrefix = new System.Windows.Forms.RadioButton();
             this.folderItemBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.folderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,6 +52,7 @@
             this.folderItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFolderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udDigit)).BeginInit();
+            this.groupPos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folderItemBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.folderItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
@@ -97,6 +101,12 @@
             this.dgvFolderList.RowTemplate.Height = 21;
             this.dgvFolderList.Size = new System.Drawing.Size(460, 291);
             this.dgvFolderList.TabIndex = 3;
+            // 
+            // folderitem
+            // 
+            this.folderitem.HeaderText = "フォルダ名";
+            this.folderitem.Name = "folderitem";
+            this.folderitem.Width = 300;
             // 
             // btnBrowseList
             // 
@@ -160,7 +170,7 @@
             // 
             // txtSeparater
             // 
-            this.txtSeparater.Location = new System.Drawing.Point(289, 381);
+            this.txtSeparater.Location = new System.Drawing.Point(275, 382);
             this.txtSeparater.Name = "txtSeparater";
             this.txtSeparater.Size = new System.Drawing.Size(55, 19);
             this.txtSeparater.TabIndex = 11;
@@ -169,7 +179,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(205, 384);
+            this.label4.Location = new System.Drawing.Point(191, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 12);
             this.label4.TabIndex = 12;
@@ -192,12 +202,6 @@
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
-            // folderitem
-            // 
-            this.folderitem.HeaderText = "フォルダ名";
-            this.folderitem.Name = "folderitem";
-            this.folderitem.Width = 300;
-            // 
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(138, 420);
@@ -207,6 +211,39 @@
             this.btnClear.Text = "リストのクリア(&C)";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // groupPos
+            // 
+            this.groupPos.Controls.Add(this.rdoSuffix);
+            this.groupPos.Controls.Add(this.rdoPrefix);
+            this.groupPos.Location = new System.Drawing.Point(350, 384);
+            this.groupPos.Name = "groupPos";
+            this.groupPos.Size = new System.Drawing.Size(124, 59);
+            this.groupPos.TabIndex = 18;
+            this.groupPos.TabStop = false;
+            this.groupPos.Text = "位置";
+            // 
+            // rdoSuffix
+            // 
+            this.rdoSuffix.AutoSize = true;
+            this.rdoSuffix.Location = new System.Drawing.Point(73, 27);
+            this.rdoSuffix.Name = "rdoSuffix";
+            this.rdoSuffix.Size = new System.Drawing.Size(35, 16);
+            this.rdoSuffix.TabIndex = 19;
+            this.rdoSuffix.Text = "後";
+            this.rdoSuffix.UseVisualStyleBackColor = true;
+            // 
+            // rdoPrefix
+            // 
+            this.rdoPrefix.AutoSize = true;
+            this.rdoPrefix.Checked = true;
+            this.rdoPrefix.Location = new System.Drawing.Point(21, 27);
+            this.rdoPrefix.Name = "rdoPrefix";
+            this.rdoPrefix.Size = new System.Drawing.Size(35, 16);
+            this.rdoPrefix.TabIndex = 18;
+            this.rdoPrefix.TabStop = true;
+            this.rdoPrefix.Text = "前";
+            this.rdoPrefix.UseVisualStyleBackColor = true;
             // 
             // folderItemBindingSource2
             // 
@@ -232,7 +269,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 460);
+            this.ClientSize = new System.Drawing.Size(493, 485);
+            this.Controls.Add(this.groupPos);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.txtList);
@@ -253,6 +291,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFolderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udDigit)).EndInit();
+            this.groupPos.ResumeLayout(false);
+            this.groupPos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.folderItemBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.folderItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
@@ -288,6 +328,9 @@
         private System.Windows.Forms.BindingSource folderItemBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn folderitem;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.GroupBox groupPos;
+        private System.Windows.Forms.RadioButton rdoSuffix;
+        private System.Windows.Forms.RadioButton rdoPrefix;
     }
 }
 

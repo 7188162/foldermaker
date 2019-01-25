@@ -29,8 +29,6 @@ namespace FolderMaker {
             openFileDialog1.DefaultExt = "*.txt";
             openFileDialog1.FileName = "";
 
-            //openFileDialog1.CheckPathExists = false;
-            //openFileDialog1.CheckFileExists = false;
             String fileName;
             if (openFileDialog1.ShowDialog() == DialogResult.OK) {
                 fileName = openFileDialog1.FileName;
@@ -53,10 +51,6 @@ namespace FolderMaker {
             const string MSG_TOOLONG = "パスが長すぎます。";
             const string MSG_ERROR = "エラーが発生しました。";
 
-
-
-
-
             if (txtDest.Text.Equals("")) {
                 MessageBox.Show(MSG_BLANKDEST, "情報", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnBrowseDest.PerformClick();
@@ -69,7 +63,6 @@ namespace FolderMaker {
             }
 
             String DESTDIR = txtDest.Text;
-            //IEnumerator<DataGridViewRow> enumerator = dgvFolderList.Rows.Cast<DataGridViewRow>().GetEnumerator();
             IEnumerator<DataGridViewRow> enumerator = dgvFolderList.Rows.Cast<DataGridViewRow>().GetEnumerator(); 
 
             int i = 1;
@@ -77,15 +70,21 @@ namespace FolderMaker {
                 if (enumerator.Current.Cells[0].Value == null) { break; }
                 string foldername = enumerator.Current.Cells[0].Value.ToString();
                 if (chkSeq.Checked) {
-                     foldername = String.Format("{0,0:D" + udDigit.Value+"}{1}{2}",i,txtSeparater.Text,foldername );
+                    if (rdoPrefix.Checked) {
+                        foldername = String.Format("{0,0:D" + udDigit.Value + "}{1}{2}", i, txtSeparater.Text, foldername);
+                    } else {
+                        foldername = String.Format("{2}{1}{0,0:D" + udDigit.Value + "}", i, txtSeparater.Text, foldername);
+                    }
+
                 }
                 String folderpath = DESTDIR + "\\" + foldername;
 
                 Console.WriteLine(folderpath);
+
                 try {
                     Directory.CreateDirectory(folderpath);
-               
-                }catch (ArgumentNullException ex) {
+
+                } catch (ArgumentNullException ex) {
                     MessageBox.Show(MSG_NOTPROPERFOLDER, "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 } catch (PathTooLongException ex) {
@@ -102,7 +101,7 @@ namespace FolderMaker {
                 }
                 i++;
             }
-            MessageBox.Show(String.Format(MSG_COMPLETE, dgvFolderList.RowCount), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(MSG_COMPLETE, dgvFolderList.RowCount-1), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnRead_Click(object sender, EventArgs e) {
