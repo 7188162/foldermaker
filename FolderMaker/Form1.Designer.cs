@@ -65,7 +65,7 @@
             this.txtDest.Location = new System.Drawing.Point(97, 12);
             this.txtDest.Name = "txtDest";
             this.txtDest.Size = new System.Drawing.Size(215, 19);
-            this.txtDest.TabIndex = 0;
+            this.txtDest.TabIndex = 1;
             // 
             // openFileDialog1
             // 
@@ -76,7 +76,7 @@
             this.btnBrowseDest.Location = new System.Drawing.Point(318, 10);
             this.btnBrowseDest.Name = "btnBrowseDest";
             this.btnBrowseDest.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseDest.TabIndex = 1;
+            this.btnBrowseDest.TabIndex = 2;
             this.btnBrowseDest.Text = "参照...(&B)";
             this.btnBrowseDest.UseVisualStyleBackColor = true;
             this.btnBrowseDest.Click += new System.EventHandler(this.btnBrowseDest_Click);
@@ -87,7 +87,7 @@
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 0;
             this.label1.Text = "作成先(&D):";
             // 
             // dgvFolderList
@@ -100,7 +100,7 @@
             this.dgvFolderList.Name = "dgvFolderList";
             this.dgvFolderList.RowTemplate.Height = 21;
             this.dgvFolderList.Size = new System.Drawing.Size(460, 291);
-            this.dgvFolderList.TabIndex = 3;
+            this.dgvFolderList.TabIndex = 7;
             // 
             // folderitem
             // 
@@ -113,7 +113,7 @@
             this.btnBrowseList.Location = new System.Drawing.Point(318, 45);
             this.btnBrowseList.Name = "btnBrowseList";
             this.btnBrowseList.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseList.TabIndex = 4;
+            this.btnBrowseList.TabIndex = 5;
             this.btnBrowseList.Text = "参照...(&R)";
             this.btnBrowseList.UseVisualStyleBackColor = true;
             this.btnBrowseList.Click += new System.EventHandler(this.button2_Click);
@@ -124,7 +124,7 @@
             this.label2.Location = new System.Drawing.Point(12, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 12);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 3;
             this.label2.Text = "一覧ファイル(&L):";
             // 
             // btnGenerate
@@ -132,7 +132,7 @@
             this.btnGenerate.Location = new System.Drawing.Point(16, 420);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(94, 23);
-            this.btnGenerate.TabIndex = 6;
+            this.btnGenerate.TabIndex = 14;
             this.btnGenerate.Text = "作成(&G)";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
@@ -143,7 +143,7 @@
             this.chkSeq.Location = new System.Drawing.Point(14, 384);
             this.chkSeq.Name = "chkSeq";
             this.chkSeq.Size = new System.Drawing.Size(96, 16);
-            this.chkSeq.TabIndex = 7;
+            this.chkSeq.TabIndex = 8;
             this.chkSeq.Text = "連番を付す(&S):";
             this.chkSeq.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +182,7 @@
             this.label4.Location = new System.Drawing.Point(191, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 12);
-            this.label4.TabIndex = 12;
+            this.label4.TabIndex = 10;
             this.label4.Text = "区切り文字(&E):";
             // 
             // txtList
@@ -190,14 +190,14 @@
             this.txtList.Location = new System.Drawing.Point(97, 47);
             this.txtList.Name = "txtList";
             this.txtList.Size = new System.Drawing.Size(215, 19);
-            this.txtList.TabIndex = 13;
+            this.txtList.TabIndex = 4;
             // 
             // btnRead
             // 
             this.btnRead.Location = new System.Drawing.Point(399, 45);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(75, 23);
-            this.btnRead.TabIndex = 14;
+            this.btnRead.TabIndex = 6;
             this.btnRead.Text = "読み込み";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
@@ -229,7 +229,7 @@
             this.rdoSuffix.Location = new System.Drawing.Point(73, 27);
             this.rdoSuffix.Name = "rdoSuffix";
             this.rdoSuffix.Size = new System.Drawing.Size(35, 16);
-            this.rdoSuffix.TabIndex = 19;
+            this.rdoSuffix.TabIndex = 13;
             this.rdoSuffix.Text = "後";
             this.rdoSuffix.UseVisualStyleBackColor = true;
             // 
@@ -240,7 +240,7 @@
             this.rdoPrefix.Location = new System.Drawing.Point(21, 27);
             this.rdoPrefix.Name = "rdoPrefix";
             this.rdoPrefix.Size = new System.Drawing.Size(35, 16);
-            this.rdoPrefix.TabIndex = 18;
+            this.rdoPrefix.TabIndex = 12;
             this.rdoPrefix.TabStop = true;
             this.rdoPrefix.Text = "前";
             this.rdoPrefix.UseVisualStyleBackColor = true;

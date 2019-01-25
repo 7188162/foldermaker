@@ -25,7 +25,7 @@ namespace FolderMaker {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            openFileDialog1.Filter = "テキストファイル (*.txt)|.txt|リスト (*.list)|*.list|すべてのファイル|*.*";
+            openFileDialog1.Filter = "テキストまたはリストファイル(*.txt;*.list;*.lst)|*.txt;*.list;*.lst|テキストファイル (*.txt)|*.txt|リスト (*.list)|*.list|すべてのファイル|*.*";
             openFileDialog1.DefaultExt = "*.txt";
             openFileDialog1.FileName = "";
 
